@@ -1,0 +1,113 @@
+:root{
+  --bg:#f5f6f7;--paper:#fff;--ink:#191a1c;--muted:#5f6268;--dim:#8a8d93;
+  --line:#e1e3e6;--accent:#755044;--accent-dark:#5f4037;--soft:#f3ebe8;
+  --soft-2:#faf6f4;--danger:#9b3d3d;--shadow:0 10px 30px rgba(30,25,22,.05);
+  --font:"Segoe UI",Tahoma,Arial,sans-serif;--serif:"Noto Serif","Times New Roman",Georgia,serif;
+}
+html.dark{
+  --bg:#141312;--paper:#1d1c1a;--ink:#ecebe8;--muted:#b4b1ab;--dim:#8d8a85;
+  --line:#2f2d2a;--accent:#d29a86;--accent-dark:#e3b2a1;--soft:#2d2522;--soft-2:#221d1b;
+  --shadow:0 10px 30px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.5}
+a{color:inherit}button,select,input{font:inherit;color:inherit}
+kbd{font:11px var(--font);padding:2px 6px;border:1px solid var(--line);border-radius:4px;background:var(--paper);color:var(--dim)}
+
+.topbar{height:64px;position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:10px;padding:0 20px;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;font-size:14px;font-weight:800;white-space:nowrap}
+.brand-mark{display:grid;place-items:center;width:31px;height:31px;border-radius:7px;background:var(--accent);color:#fff;font:700 17px var(--serif)}
+html.dark .brand-mark{color:#1d1c1a}
+.search-wrap{position:relative;margin:0 auto;max-width:540px;flex:1 1 auto;min-width:0;height:38px;border:1px solid var(--line);background:var(--bg);border-radius:8px;display:flex;align-items:center;padding:0 11px;color:var(--dim);gap:7px}
+.search-wrap:focus-within{border-color:var(--accent)}
+.search-wrap input{border:0;outline:0;background:transparent;min-width:0;flex:1;color:var(--ink);font-size:13.5px}
+.search-results{position:absolute;top:44px;left:0;right:0;max-height:60vh;overflow:auto;margin:0;padding:6px;list-style:none;background:var(--paper);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);z-index:50}
+.search-results li{display:flex;gap:10px;align-items:baseline;padding:6px 8px;border-radius:6px;font:14px/1.5 var(--serif);color:var(--ink)}
+.search-results li:hover{background:var(--soft-2)}
+.search-results li.empty{font:13px var(--font);color:var(--dim)}
+.search-results .verse-jump{min-width:38px;font-family:var(--font)}
+.icon-btn{position:relative;width:36px;height:36px;flex-shrink:0;border:1px solid var(--line);background:var(--paper);border-radius:8px;color:var(--muted);cursor:pointer;font-size:15px}
+.icon-btn:hover{color:var(--accent);border-color:var(--accent)}
+.badge{position:absolute;top:-6px;right:-6px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;background:var(--accent);color:#fff;font:700 10px/17px var(--font)}
+.badge:empty{display:none}
+.bookmarks{position:absolute;top:60px;right:20px;width:min(380px,calc(100vw - 32px));max-height:70vh;overflow:auto;padding:14px 16px;background:var(--paper);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+.bookmarks h2{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--dim)}
+.bookmarks ul{margin:0;padding:0;list-style:none}
+.bookmarks li{display:flex;gap:10px;align-items:baseline;padding:6px 0;border-bottom:1px solid var(--line);font:14px/1.5 var(--serif)}
+.bookmarks li:last-child{border-bottom:0}.bookmarks li.empty{font:13px var(--font);color:var(--dim)}
+.bookmarks .verse-jump{white-space:nowrap;font-family:var(--font)}
+.progress-track{height:3px;background:var(--line)}.progress{height:3px;width:0;background:var(--accent);transition:width .25s}
+
+.layout{max-width:1240px;margin:0 auto;padding:28px 20px 40px}
+.status{max-width:560px;margin:80px auto;text-align:center;color:var(--muted)}
+.reader{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:24px;align-items:start}
+.poem-card,.notes-col>*{background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+.poem-card{padding:22px 24px 18px;position:sticky;top:84px}
+.card-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:10px}
+.eyebrow{margin:0;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.card-head h1{margin:2px 0 0;font:700 22px/1.3 var(--serif)}
+.btn{border:1px solid var(--line);background:var(--paper);border-radius:8px;padding:7px 12px;font-size:13px;cursor:pointer;color:var(--ink)}
+.btn:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}
+.btn:disabled{opacity:.45;cursor:default}
+.btn.ghost{background:var(--soft-2)}
+.speech-note{margin:0 0 10px;padding:8px 10px;border-radius:8px;background:var(--soft-2);font-size:12.5px;color:var(--muted)}
+
+.verses{display:grid;gap:4px}
+.pair{position:relative;padding:6px 40px 6px 0;border-bottom:1px dashed var(--line)}
+.pair:last-child{border-bottom:0}
+.verse{display:grid;grid-template-columns:44px 1fr 28px;align-items:baseline;gap:6px;padding:3px 6px;border-radius:7px;scroll-margin-top:120px}
+.verse .num{font:600 11px var(--font);color:var(--dim);text-align:right;font-variant-numeric:tabular-nums}
+.verse .text{font:19px/1.65 var(--serif);color:var(--ink)}
+.verse.bat .text{padding-left:22px}
+.verse.has-notes{cursor:pointer}
+.verse.has-notes .num::before{content:"";display:inline-block;width:6px;height:6px;margin-right:6px;border-radius:50%;background:var(--accent);vertical-align:middle}
+.verse.has-notes:hover{background:var(--soft-2)}
+.verse.selected{background:var(--soft)}
+.mark{border:0;background:transparent;color:var(--dim);cursor:pointer;font-size:15px;opacity:0;padding:0}
+.verse:hover .mark,.mark.on,.mark:focus-visible{opacity:1}
+.mark.on{color:var(--accent)}
+.say{position:absolute;right:2px;top:50%;transform:translateY(-50%);border:0;background:transparent;cursor:pointer;font-size:14px;opacity:.35;padding:6px}
+.pair:hover .say,.say:focus-visible{opacity:1}
+.pager{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:16px}.pager .btn{white-space:nowrap}
+.pager select{flex:1;min-width:0;max-width:240px;padding:7px 8px;border:1px solid var(--line);border-radius:8px;background:var(--paper);font-size:13px}
+.source-note{margin:12px 0 0;font-size:11.5px;color:var(--dim)}
+.source-note a{color:var(--accent)}
+.source-note .warn{color:var(--danger)}
+
+.notes-col{display:grid;gap:14px}
+.reader-insight-row{padding:12px 14px;border-radius:10px;margin-top:8px}
+.reader-insight-row b{display:block;font:700 9.5px/1.4 var(--font);letter-spacing:.08em;color:var(--dim);margin-bottom:3px}
+.insight-label-line b{margin-bottom:0}
+.reader-insight-row p{margin:2px 0 0;font:13.5px/1.6 var(--font);color:var(--muted)}
+.reader-insight-row strong{display:block}
+.psychology-card{margin:0;padding:16px 18px}
+.line-notes{padding:16px 18px;scroll-margin-top:84px}
+.line-notes.selected{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent)}
+.line-notes h3{margin:0 0 4px;display:flex;gap:10px;align-items:baseline;font-weight:400}
+.line-notes h3 span{font:16px/1.5 var(--serif);color:var(--ink)}
+.line-notes h3 .verse-jump{white-space:nowrap}
+.insight-layer{background:var(--soft-2)}
+.insight-field+.insight-field{margin-top:9px}
+.no-notes{padding:16px 18px;margin:0;font-size:13.5px;color:var(--muted)}
+.footer{max-width:1240px;margin:0 auto;padding:0 20px 32px;font-size:12px;color:var(--dim)}
+
+@media (max-width:900px){
+  .reader{grid-template-columns:minmax(0,1fr)}
+  .poem-card{position:static}
+}
+@media (max-width:600px){
+  .topbar{padding:0 10px;gap:6px}
+  .icon-btn{width:34px;height:34px}
+  .search-wrap{padding:0 8px}
+  .brand span:last-child{display:none}
+  .search-wrap kbd{display:none}
+  .layout{padding:16px 12px 32px}
+  .poem-card{padding:16px 14px}
+  .verse{grid-template-columns:34px 1fr 24px}
+  .verse .text{font-size:17px}
+  .verse.bat .text{padding-left:12px}
+  .card-head{flex-direction:column;align-items:flex-start}
+  .mark{opacity:1}
+  .say{opacity:.7}
+  .footer{display:none}
+}

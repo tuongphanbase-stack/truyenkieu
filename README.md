@@ -20,6 +20,27 @@ and close readings of key passages.
   Vietnamese voice.
 - Light/dark theme, works on phones, keyboard shortcuts (← → pages, `/` search).
 - Links like `.../#cau-723` open directly at a line.
+- **Installable app that works offline** (see below).
+- Same look as its sister site, the
+  [Chinh Phụ Ngâm reader](https://tuongphanbase-stack.github.io/chinhphungam/);
+  the footer links to it and to the
+  [project list](https://tuongphanbase-stack.github.io/emailer-dashboard/projects.html).
+
+## Install on a phone
+
+The site is a Progressive Web App, so it can be added to the home screen and
+opens full screen like an app:
+
+- **Android (Chrome):** open the site, tap **⋮** → **Install app** /
+  **Add to Home screen** (*Cài đặt ứng dụng* / *Thêm vào màn hình chính*).
+- **iPhone / iPad (Safari):** tap **Share** → **Add to Home Screen**
+  (*Thêm vào MH chính*).
+- **Computer (Chrome / Edge):** click the install icon at the right of the
+  address bar.
+
+Open it once while online: the app itself is then cached by the service
+worker, and the poem text is kept in the browser's storage, so it keeps
+working without a connection.
 
 ## Where the text comes from
 
@@ -38,6 +59,20 @@ line number.
 
 > **Tip:** to stop depending on Wikisource, save the text as
 > `data/truyen-kieu.txt` in this repo.
+
+## Shared look and the offline app
+
+- `css/site.css` (colour and type tokens, header, footer, light/dark) and
+  `js/site.js` (theme before first paint, theme button, service-worker
+  registration) are **identical copies** of the files in the `chinhphungam`
+  repo. Edit both copies together; each site sets only its own accent colour
+  at the top of its stylesheet (`css/reader.css` here).
+- `manifest.webmanifest`, `icons/` and `sw.js` make the site installable.
+  `sw.js` serves the files listed in `SHELL` from its cache first, so when you
+  change any of them, bump their `?v=` in `index.html` and in `SHELL`, and
+  bump `VERSION`. `tests/pwa.test.js` fails if a file the page loads is
+  missing from `SHELL`. Requests to Wikisource are never cached by the
+  service worker; the reader keeps the text in `localStorage` itself.
 
 ## Recovery status
 

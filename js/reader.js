@@ -5,7 +5,7 @@
 const PAGE_SIZE = 24;            // 12 lục-bát pairs per page
 const LS_PAGE = 'kieu_last_page';
 const LS_MARKS = 'kieu_bookmarks';
-const LS_THEME = 'kieu_theme';
+// The light/dark theme is handled by js/site.js (shared with the Chinh Phụ Ngâm reader).
 
 const state = { lines: [], page: 0, source: null, selected: null, speaking: false };
 
@@ -222,15 +222,6 @@ function stopSpeaking() {
   $('readPage').textContent = '🔊 Đọc trang này';
 }
 
-/* ---------- Theme ---------- */
-
-function applyTheme(theme) {
-  document.documentElement.classList.toggle('dark', theme === 'dark');
-  document.body.classList.toggle('dark', theme === 'dark');
-  $('themeToggle').textContent = theme === 'dark' ? '☀' : '☾';
-  $('themeToggle').setAttribute('aria-label', theme === 'dark' ? 'Chuyển sang nền sáng' : 'Chuyển sang nền tối');
-}
-
 /* ---------- Wiring ---------- */
 
 function bindEvents() {
@@ -282,11 +273,6 @@ function bindEvents() {
     const from = state.page * PAGE_SIZE;
     speak(state.lines.slice(from, from + PAGE_SIZE));
   });
-  $('themeToggle').addEventListener('click', () => {
-    const next = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-    store.set(LS_THEME, next);
-    applyTheme(next);
-  });
   $('retry').addEventListener('click', () => load(true));
   document.addEventListener('keydown', e => {
     if (e.target.matches('input, select, textarea')) return;
@@ -326,6 +312,5 @@ function load(refresh) {
   });
 }
 
-applyTheme(store.get(LS_THEME, window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
 bindEvents();
 load(false);

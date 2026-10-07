@@ -1,25 +1,34 @@
 <!doctype html>
-<html lang="vi">
+<html lang="vi" data-theme-key="kieu_theme">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Truyện Kiều — Nguyên văn & Giải nghĩa</title>
 <meta name="description" content="Đọc nguyên văn 3.254 câu Truyện Kiều của Nguyễn Du cùng chú giải, diễn biến tâm lý và phân tích theo từng trường đoạn.">
-<link rel="stylesheet" href="css/reader.css?v=20261007-1">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-title" content="Truyện Kiều">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<script src="js/site.js?v=20261007-2"></script>
+<link rel="stylesheet" href="css/site.css?v=20261007-2">
+<link rel="stylesheet" href="css/reader.css?v=20261007-2">
 <link rel="stylesheet" href="css/narrative-layers.css?v=20260827-34">
 <link rel="stylesheet" href="css/cultural-layers.css?v=20260827-35">
 </head>
 <body>
 <header class="topbar">
-  <a class="brand" href="./"><span class="brand-mark">K</span><span>Truyện Kiều</span></a>
+  <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">K</span><span class="brand-name">Truyện Kiều</span></a>
   <div class="search-wrap">
     <span aria-hidden="true">⌕</span>
     <input id="search" type="search" placeholder="Tìm câu thơ (gõ không dấu được) hoặc số câu…" aria-label="Tìm câu thơ hoặc nhập số câu">
     <kbd>/</kbd>
     <ul class="search-results" id="searchResults" hidden></ul>
   </div>
-  <button class="icon-btn" id="bookmarkToggle" title="Câu đã đánh dấu" aria-label="Câu đã đánh dấu">★<span class="badge" id="bookmarkCount"></span></button>
-  <button class="icon-btn" id="themeToggle" title="Đổi nền sáng/tối">☾</button>
+  <div class="topbar-actions">
+    <button class="icon-btn" id="bookmarkToggle" type="button" title="Câu đã đánh dấu" aria-label="Câu đã đánh dấu">★<span class="badge" id="bookmarkCount"></span></button>
+    <button class="icon-btn" id="themeToggle" type="button" data-theme-toggle title="Đổi nền sáng/tối" aria-label="Đổi nền sáng/tối">☾</button>
+  </div>
   <div class="bookmarks" id="bookmarks" hidden>
     <h2>Câu đã đánh dấu</h2>
     <ul id="bookmarkList"></ul>
@@ -59,14 +68,18 @@
   </div>
 </main>
 
-<footer class="footer">
-  Phím tắt: <kbd>←</kbd> <kbd>→</kbd> chuyển trang · <kbd>/</kbd> tìm kiếm · Bấm vào câu có chấm màu để xem chú giải.
+<footer class="site-footer">
+  <p class="site-footer-note">Bấm vào câu có chấm màu để xem chú giải.<span class="shortcuts"> Phím tắt: <kbd>←</kbd> <kbd>→</kbd> chuyển trang · <kbd>/</kbd> tìm kiếm.</span></p>
+  <nav class="site-footer-links" aria-label="Đọc thêm">
+    <a class="crosslink" href="https://tuongphanbase-stack.github.io/chinhphungam/" style="--mark:#3b5478"><span class="crosslink-mark" aria-hidden="true">C</span><span>Đọc thêm: <strong>Chinh Phụ Ngâm</strong> →</span></a>
+    <a class="projects-link" href="https://tuongphanbase-stack.github.io/emailer-dashboard/projects.html">Các dự án khác</a>
+  </nav>
 </footer>
 
 <script src="js/narrative-layers.js?v=20260827-34"></script>
 <script src="js/reader-insights.js?v=20260827-33"></script>
 <script src="js/text-source.js?v=20261007-1"></script>
-<script src="js/reader.js?v=20261007-1"></script>
+<script src="js/reader.js?v=20261007-2"></script>
 <script src="js/cultural-layers.js?v=20260827-35"></script>
 </body>
 </html>

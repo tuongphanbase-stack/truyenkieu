@@ -1,0 +1,19 @@
+{
+  "id": "./",
+  "name": "Truyện Kiều — Nguyên văn & Giải nghĩa",
+  "short_name": "Truyện Kiều",
+  "description": "Đọc nguyên văn 3.254 câu Truyện Kiều của Nguyễn Du cùng chú giải, diễn biến tâm lý và phân tích theo từng trường đoạn. Đọc được cả khi không có mạng sau lần mở đầu tiên.",
+  "lang": "vi",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f6f7",
+  "theme_color": "#ffffff",
+  "categories": ["books", "education"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

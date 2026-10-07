@@ -1,0 +1,5 @@
+repo=tuongphantrue/truyenkieu
+branch=main
+last_confirmed_commit=51927daff436c8f7f61958b1b46104b69ada5cf1
+last_confirmed_asset_version=20260827-34
+next_unpushed_batch_asset_version=20260827-35

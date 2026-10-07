@@ -1,0 +1,55 @@
+# Last-seen Truyện Kiều repository inventory
+
+The following paths were confirmed in the GitHub tree before access failed. Many of their exact bytes are NOT retained in this recovery.
+
+- README.md
+- css/style.css
+- css/reader-fixes.css
+- js/app.js
+- js/data.js
+- js/glossary-extra.js
+- js/line-meanings.js
+- js/meanings/02-0039-0244.js
+- js/meanings/03-0245-0572.js
+- js/meanings/04-0573-0804.js
+- js/meanings/05-0805-1056.js
+- js/meanings/06-1057-1274.js
+- js/meanings/07-1275-1526.js
+- js/meanings/08-1527-1704.js
+- js/meanings/09-1705-2032.js
+- js/meanings/10-2033-2164.js
+- js/meanings/11-2165-2288.js
+- js/meanings/12-2289-2418.js
+- js/meanings/13a-2419-2498.js
+- js/meanings/13b-2499-2578.js
+- js/meanings/13c-2579-2658.js
+- js/meanings/13d-2659-2738.js
+- js/meanings/14a-2739-2818.js
+- js/meanings/14b-2819-2898.js
+- js/meanings/14c-2899-2972.js
+- js/meanings/15-2973-3254.js
+- js/han-viet.js
+- js/han-viet-review.js
+- js/han-viet-final-section.js
+- js/han-viet-global-review.js
+- js/han-viet-2089-2156.js
+- js/han-viet-review-more.js
+- js/han-viet-2419-2972-review.js
+- js/han-viet-review-pass5.js
+- js/han-viet-review-pass6.js
+- js/research-annotations.js
+- js/vocab-audit/01-04.js
+- js/vocab-audit/05-08.js
+- js/vocab-audit/09-12.js
+- js/vocab-audit/13-15.js
+- js/vocab-source-audit.js
+- js/vocab-source-audit-more.js
+- js/vocab-maximal-audit-1.js
+- js/vocab-maximal-audit-2.js
+- js/vocab-maximal-audit-3.js
+- js/vocab-maximal-audit-4.js
+- js/vocab-maximal-audit-5.js
+- js/vocab-maximal-audit-6.js
+- js/vocab-maximal-audit-7.js
+- js/vocab-maximal-audit-8.js
+- js/vocab-maximal-audit-9.js

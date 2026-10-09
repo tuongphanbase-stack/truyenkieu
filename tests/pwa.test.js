@@ -51,7 +51,7 @@ for (const entry of shell) {
 }
 
 // 3. Service worker behaviour.
-const ORIGIN = 'https://tuongphanbase-stack.github.io';
+const ORIGIN = 'https://tuongphanbase.github.io';
 const SCOPE = `${ORIGIN}/truyenkieu/`;
 const net = { online: true, calls: [], files: new Map() };
 for (const entry of shell) net.files.set(new URL(entry, SCOPE).pathname, `body of ${entry}`);

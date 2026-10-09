@@ -7,11 +7,11 @@
 // - Cross-origin requests (the Wikisource API) are not touched: the reader
 //   already keeps the poem text in localStorage after the first load.
 //
-// Every project on tuongphanbase-stack.github.io shares one CacheStorage, so
+// Every project on tuongphanbase.github.io shares one CacheStorage, so
 // this worker only ever creates or deletes caches whose names start with PREFIX.
 'use strict';
 
-const VERSION = '2026-10-09.1';
+const VERSION = '2026-10-09.2';
 const PREFIX = 'truyenkieu-';
 const SHELL_CACHE = `${PREFIX}shell-${VERSION}`;
 const RUNTIME_CACHE = `${PREFIX}runtime-${VERSION}`;

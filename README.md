@@ -22,9 +22,9 @@ and close readings of key passages.
 - Links like `.../#cau-723` open directly at a line.
 - **Installable app that works offline** (see below).
 - Same look as its sister site, the
-  [Chinh Phụ Ngâm reader](https://tuongphanbase-stack.github.io/chinhphungam/);
+  [Chinh Phụ Ngâm reader](https://tuongphanbase.github.io/chinhphungam/);
   the footer links to it and to the
-  [project list](https://tuongphanbase-stack.github.io/emailer-dashboard/projects.html).
+  [project list](https://tuongphanbase.github.io/emailer-dashboard/projects.html).
 
 ## Install on a phone
 

@@ -35,8 +35,10 @@ function readerInsightPieces(line) {
   if (insight) {
     const rows = [['Ý CẶP CÂU', insight.pair], ['NÓI NÔM NA', insight.plain], ['HOÀN CẢNH', insight.context],
       ['CHỮ NGHĨA', insight.grammar], ['ĐIỂN CỐ', insight.allusion], ['ẨN Ý', insight.subtext]];
+    const words = (insight.words || []).length ? `<div class="insight-field"><b>TỪ NGỮ</b><dl class="insight-words">${insight.words.map(w =>
+      `<dt>${escapeHtml(w.term)}${w.han ? ` <span class="han" lang="zh-Hant">${escapeHtml(w.han)}</span>` : ''}</dt><dd>${escapeHtml(w.meaning)}</dd>`).join('')}</dl></div>` : '';
     pieces.push(`<div class="reader-insight-row insight-layer">${rows.filter(r => r[1]).map(([k, v]) =>
-      `<div class="insight-field"><b>${k}</b><p>${escapeHtml(v)}</p></div>`).join('')}</div>`);
+      `<div class="insight-field"><b>${k}</b><p>${escapeHtml(v)}</p></div>`).join('')}${words}</div>`);
   }
   const layer = window.narrativeLayersForLine ? window.narrativeLayersForLine(line.n) : null;
   if (layer) {

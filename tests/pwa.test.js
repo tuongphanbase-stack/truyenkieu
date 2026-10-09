@@ -138,8 +138,8 @@ const navigate = url => ({ url, method: 'GET', mode: 'navigate', cache: 'default
 
   // Shell: cache first, no network.
   net.calls.length = 0;
-  const css = await respond(get(`${SCOPE}css/reader.css?v=20261007-2`));
-  assert.strictEqual(await css.text(), 'body of css/reader.css?v=20261007-2');
+  const css = await respond(get(`${SCOPE}css/reader.css?v=20261009-1`));
+  assert.strictEqual(await css.text(), 'body of css/reader.css?v=20261009-1');
   const page = await respond(navigate(`${SCOPE}?utm_source=x`));
   assert.strictEqual(await page.text(), 'body of ./');
   assert.deepStrictEqual(net.calls, [], 'shell files come from the cache');
@@ -160,7 +160,7 @@ const navigate = url => ({ url, method: 'GET', mode: 'navigate', cache: 'default
   const offlineMissing = await respond(get(`${SCOPE}data/nothing.txt`));
   assert.strictEqual(offlineMissing.type, 'error');
   const oldAsset = await respond(get(`${SCOPE}css/reader.css?v=old`));
-  assert.strictEqual(await oldAsset.text(), 'body of css/reader.css?v=20261007-2');
+  assert.strictEqual(await oldAsset.text(), 'body of css/reader.css?v=20261009-1');
 
   console.log('pwa validation passed: manifest, icons,', shell.length, 'shell files, service worker caching');
 })().catch(e => { console.error(e); process.exit(1); });

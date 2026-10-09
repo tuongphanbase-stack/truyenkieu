@@ -11,7 +11,7 @@
 // this worker only ever creates or deletes caches whose names start with PREFIX.
 'use strict';
 
-const VERSION = '2026-10-07.1';
+const VERSION = '2026-10-09.1';
 const PREFIX = 'truyenkieu-';
 const SHELL_CACHE = `${PREFIX}shell-${VERSION}`;
 const RUNTIME_CACHE = `${PREFIX}runtime-${VERSION}`;
@@ -21,14 +21,15 @@ const SHELL = [
   './',
   'manifest.webmanifest',
   'css/site.css?v=20261007-2',
-  'css/reader.css?v=20261007-2',
+  'css/reader.css?v=20261009-1',
   'css/narrative-layers.css?v=20260827-34',
   'css/cultural-layers.css?v=20260827-35',
   'js/site.js?v=20261007-2',
   'js/narrative-layers.js?v=20260827-34',
   'js/reader-insights.js?v=20260827-33',
+  'js/meanings/01-0001-0038.js?v=20261009-1',
   'js/text-source.js?v=20261007-1',
-  'js/reader.js?v=20261007-2',
+  'js/reader.js?v=20261009-1',
   'js/cultural-layers.js?v=20260827-35',
   'icons/favicon-32.png',
   'icons/apple-touch-icon.png',

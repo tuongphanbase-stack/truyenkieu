@@ -1,4 +1,18 @@
-# Recovery status: PARTIAL EXACT + ONE UNPUSHED BATCH
+# Recovery status: READER WORKS, LINE NOTES LOST
+
+**Current state (October 2026):** the site works. The full original text
+(3,254 lines) loads from Vietnamese Wikisource on the first visit and is
+then kept by the browser (`js/text-source.js`; a local `data/truyen-kieu.txt`
+is used first if one is added). The surviving reading notes - psychology
+timeline, narrative voice, cross-references, cultural background - are shown
+beside the verses.
+
+Still lost: the per-line meanings (`js/meanings/*`), the Hán-Việt notes
+(`js/han-viet*.js`) and the vocabulary audits (`js/vocab-*`), listed in
+`MISSING_EXACT_FILES.md`. They were written over many sessions and no copy
+survived.
+
+## At recovery time
 
 Last GitHub `main` commit confirmed before access failed: `51927daff436c8f7f61958b1b46104b69ada5cf1`.
 
